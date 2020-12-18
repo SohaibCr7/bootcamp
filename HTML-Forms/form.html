@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form input fields</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="form-control">
+        <h4>Login Form</h4>
+     <form action="submitdata" method="POST">
+        <label for="fname">First Name:</label>
+        <input type="text" name="name" id="fname" placeholder="Enter First Name" required><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name" required><br>
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>
+
+        <button type="submit" value="submit">Submit</button>
+
+     </form>
+    </div>
+</body>
+</html>

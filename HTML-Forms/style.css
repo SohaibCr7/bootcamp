@@ -1,0 +1,21 @@
+.form-control{
+
+    border: 5px solid darkgray;
+    border-radius: 25%;
+    padding-left: 2%;
+    padding-right: 7%;
+    padding-bottom: 40px;
+    padding-right: 0%;
+    margin-right: 40%;
+    margin-left: 40%;
+    margin-top: 10%;
+
+    text-align: left;
+
+}
+
+.form-control h4{
+
+    /* text-align: justify; */
+    padding-left: 25%;
+}
