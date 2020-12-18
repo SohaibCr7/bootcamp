@@ -6,12 +6,49 @@
     <title>Form input fields</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        function myFunction(){
+            // var fname, lname, gender;
+            // fname=document.getElementById("fname").value;
+            // lname=document.getElementById("lname").value;
+            // gender=document.getElementById("gender").value;
+            // document.write(demo1);
+            // document.write("<br>");
+            // document.write(lname);
+            // document.write("<br>");
+            // document.write(gender);
+            
+            var fname = document.getElementById("fname").value;
+            document.getElementById("demo").innerHTML = fname;
+
+            var lname = document.getElementById("lname").value;
+            document.getElementById("demo2").innerHTML=lname;
+            
+           if(document.getElementById("male").checked)
+           {
+               document.getElementById("demo3").innerHTML="MALE";
+           }
+           else if(document.getElementById("female").checked)
+           {
+               document.getElementById("demo3").innerHTML="FEMALE"
+           }
+           else if(document.getElementById("other").checked)
+           {
+            document.getElementById("demo3").innerHTML="Other"
+           }
+           else
+           alert("Required Gender");
+        }
+        
+    </script>
+   
 </head>
 <body>
 
     <div class="form-control">
         <h4>Login Form</h4>
-     <form action="submitdata" method="POST">
+     <form name="myForm" method="dialog">
         <label for="fname">First Name:</label>
         <input type="text" name="name" id="fname" placeholder="Enter First Name" required><br>
 
@@ -27,9 +64,15 @@
         <input type="radio" id="other" name="gender" value="other">
         <label for="other">Other</label><br>
 
-        <button type="submit" value="submit">Submit</button>
+        <button onclick="myFunction()">Submit</button>
 
      </form>
+    </div>
+    <div class="info">
+    <h3>USER INFO</h3>
+        <p id="demo"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
     </div>
 </body>
 </html>
