@@ -1,20 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crating List</title>
-    <script src="JavaScript.js"></script>
+<script src="JavaScript.js"></script>
 </head>
 <body>
-    
-    <label for="value1">Insert Integer Values:</label>
-    <input type="text" name="value1" id="value1" onkeyup="enterkey()">
-    <button id="myBtn" onclick="Addlist()"> Add In List</button>
-   
-    <table id="table1">
+<div id="wrapper">
+<table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+<tr>
+<th>Name</th>
+<th>Country</th>
+<th>Age</th>
+</tr>
 
-    </table>
+<tr>
+<td><input type="text" id="new_name"></td>
+<td><input type="text" id="new_country"></td>
+<td><input type="text" id="new_age"></td>
+<td><input type="button" class="add" onclick="add_row();" value="Add Row" onfocus="enterKey()"></td>
+</tr>
+
+</table>
+</div>
 
 </body>
 </html>

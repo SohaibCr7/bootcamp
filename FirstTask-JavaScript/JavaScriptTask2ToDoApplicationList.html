@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application With List</title>
+    <script>
+        var count=1;
+        var editdetails = {value: null, index: null};
+
+        function addli(){
+            var name = document.getElementById("fname").value;
+            var ListNode = document.getElementById("list");
+            var li = document.createElement("li");
+            li.innerHTML=name;
+
+            li.id = count++;
+            li.onclick = () => {
+                editdetails.index = li.id;
+                alert("Index Value:" + editdetails.index);
+                var x = document.getElementById('fname');
+                x.value=name;
+            }
+            ListNode.appendChild(li);
+            document.getElementById("fname").value = "";
+        }
+
+        function editli(){
+            
+           var new_name = document.getElementById('fname').value;
+           var list = document.getElementById("list");
+           console.log(new_name);
+           var li = document.getElementById(editdetails.index);
+           console.log(li);
+           li.innerHTML= new_name;
+           document.getElementById("fname").value = "";
+        }
+
+        function deleteli(){
+           var new_name = document.getElementById('fname').value;
+           var list = document.getElementById("list");
+           console.log(new_name);
+           var li = document.getElementById(editdetails.index);
+           li.remove();
+           document.getElementById("fname").value = "";
+
+        }
+    </script>
+</head>
+<body>
+    <div id="UserData">
+        FirstName: <input type="text" id="fname">
+        <button onclick="addli()">Add</button>
+        <button onclick="editli()">Edit</button>
+        <button onclick="deleteli()">Delete</button>
+        
+    </div>
+        
+
+    <ul id="list">
+        
+    </ul>
+</body>
+</html>
