@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo">Hello world</p>
+
+    <button onclick="document.getElementById('images').src='bulbOn.png'">
+      Turn On
+    </button>
+
+    <img id="images" src="bulbOff.jpg" alt="bulbSimple" />
+
+    <button onclick="document.getElementById('images').src='bulbOff.jpg'">
+      Turn Off
+    </button>
+
+    <script>
+      document.getElementById("demo").innerHTML = "JavaScript";
+    </script>
+  </body>
+</html>
