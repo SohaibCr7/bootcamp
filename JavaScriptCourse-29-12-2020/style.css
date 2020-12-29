@@ -1,0 +1,35 @@
+
+
+.masthead{
+
+    margin-left: 8%;;
+}
+
+.intro{
+
+    border: 2px solid black;
+    margin-right: 60%;
+    
+    padding-left: 7px;
+    
+}
+
+#origin-text{
+    border: 2px solid black;
+    margin-right: 67%;
+    margin-left: 7%;
+    padding-left: 5px;
+}
+
+.test-wrapper{
+
+    border: 5px solid grey;
+    margin-left: 14%;
+    width: 170px;
+
+}
+
+.meta ,button{
+    font-size: 40px;
+    font-weight: 50;
+}
