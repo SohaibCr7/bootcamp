@@ -1,115 +1,166 @@
-var SignalLeft = document.querySelector(".signal-body1");
+// var SignalLeft = document.querySelector(".signal-body1");
 
-var SignalBottom = document.querySelector(".signal-body2");
+// var SignalBottom = document.querySelector(".signal-body2");
 
-var SignalRight = document.querySelector(".signal-body3");
+// var SignalRight = document.querySelector(".signal-body3");
 
-var SignalTop = document.querySelector(".signal-body4");
+// var SignalTop = document.querySelector(".signal-body4");
 
-// var intervalRed = setInterval(redLight.style.background = "#E11218",1000);
 
-var ACL = 1;
-var ACB = 1;
-var ACR = 1;
-var ACT = 1;
+// var ACL = 1;
+// var ACB = 1;
+// var ACR = 1;
+
+// var ACT = 1;
+
+ // The data/time we want to countdown to
+ var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
 
 
 // Signal Left
 function leftSignal() {
-    // The data/time we want to countdown to
-    var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
-
-    // Run myfunc every second
-    var myfunc = setInterval(function() {
-
-    var now = new Date().getTime();
-    var timeleft = countDownDate - now;
-    var seconds = Math.floor((timeleft % (1000 *10)) / 1000);
+            var red = setInterval(() => {
+            var l1 = document.querySelector(".l1");
+            var l2 = document.querySelector(".l2");
+            var l3 = document.querySelector(".l3");
+            var now = new Date().getTime();
+            var timeleft = countDownDate - now;
+            seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+            document.querySelector("#lCount").innerHTML = seconds; 
+            // Display the color when countdown is running
+            if (seconds < 60 && seconds > 41) 
+              {
+                    runningTime = true;
+                    // clearInterval(red);
+                    // l1.style.background = "#fff";
+                    l3.style.background = "#111";
+                    l1.style.background = "#E11218";
+              }
+              else if(seconds > 21 && seconds < 40)
+              {
+                runningTime = true;
+                l1.style.background = "#111";
+                l2.style.background = "#FFFF00";
+              }
+              else if(seconds > 0 && seconds < 21)
+              {
+                  l2.style.background = "#111";
+                  l3.style.background = "#358A22"
+              }
+            
+            }, 1000);
+            
         
-    // Result is output to the specific element
-    document.getElementById("s1Count").innerHTML = seconds;
-        
-    // Display the message when countdown is over
-    if (seconds < 0) {
-        clearInterval(myfunc);
-        document.getElementById("s1count").innerHTML = "";
-       
-    }
-    }, 1000);
+}
+
+
+function bottomSignal() {
     
-    const l1 = SignalLeft.querySelector(".l1");
-    const l2 = SignalLeft.querySelector(".l2");
-    const l3 = SignalLeft.querySelector(".l3");
-
-    l1.style.background = "#fff";
-    l2.style.background = "#fff";
-    l3.style.background = "#fff";
-    if (ACL === 1) {
-      var a=setInterval(() => {
-        l1.style.background = "#E11218";
-        ACL = 2;
-      }, myfunc); 
-      
-      
-    } else if (ACL === 2) {
-      l2.style.background = "#FFFF00";
-      ACL = 3;
-    } else if (ACL === 3) {
-      l3.style.background = "#358A22";
-      ACL = 1;
-    }
+    var red = setInterval(function() {
+    var b1 = document.querySelector(".b1");
+    var b2 = document.querySelector(".b2");
+    var b3 = document.querySelector(".b3");
+    var now = new Date().getTime();
+    
+    var timeleft = countDownDate - now;
+    seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+    document.querySelector("#bCount").innerHTML = seconds; 
+    // Display the color when countdown is running
+    if (seconds < 60 && seconds > 41) 
+      {
+            // clearInterval(red);
+            // l1.style.background = "#fff";
+            b3.style.background = "#111";
+            b1.style.background = "#E11218";
+      }
+      else if(seconds > 21 && seconds < 40)
+      {
+        b1.style.background = "#111";
+        b2.style.background = "#FFFF00";
+      }
+      else if(seconds > 0 && seconds < 21)
+      {
+          b2.style.background = "#111";
+          b3.style.background = "#358A22"
+      }
+    
+    }, 1000);
     
 }
 
-// function buttomSignal(){
+function rightSignal() {
+    
+    var red = setInterval(function() {
+    var r1 = document.querySelector(".r1");
+    var r2 = document.querySelector(".r2");
+    var r3 = document.querySelector(".r3");
+    var now = new Date().getTime();
+    
+    var timeleft = countDownDate - now;
+    seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+    document.querySelector("#rCount").innerHTML = seconds; 
+    // Display the color when countdown is running
+    if (seconds < 60 && seconds > 41) 
+      {
+            // clearInterval(red);
+            // l1.style.background = "#fff";
+            r3.style.background = "#111";
+            r1.style.background = "#E11218";
+      }
+      else if(seconds > 21 && seconds < 40)
+      {
+        r1.style.background = "#111";
+        r2.style.background = "#FFFF00";
+      }
+      else if(seconds > 0 && seconds < 21)
+      {
+          r2.style.background = "#111";
+          r3.style.background = "#358A22"
+      }
+    
+    }, 1000);
+    
+}
 
-//      //Signal Bottom
-   
-//     let b1 = SignalBottom.querySelector(".b1");
-//     let b2 = SignalBottom.querySelector(".b2");
-//     let b3 = SignalBottom.querySelector(".b3");
-//     b1.style.background = "#fff";
-//     b2.style.background = "#fff";
-//     b3.style.background = "#fff";
-//     if (ACB == 1) {
-//       b1.style.background = "#E11218";
-//       ACB = 2;
-//     } else if (ACB == 2) {
-//       b2.style.background = "#FFFF00";
-//       ACB = 3;
-//     } else if (ACB == 3) {
-//       b3.style.background = "#358A22";
-//       ACB = 1;
-      
-//     }
-  
-// }
+function topSignal(){
 
-// function rightSignal(){
-            
-//     let r1 = SignalRight.querySelector(".r1");
-//     let r2 = SignalRight.querySelector(".r2");
-//     let r3 = SignalRight.querySelector(".r3");
-//     r1.style.background = "#fff";
-//     r2.style.background = "#fff";
-//     r3.style.background = "#fff";
-//     if (ACR == 1)
-//     {
-//         r1.style.background = "#E11218";
-//         ACR = 2;
-//     } 
-//     else if (ACR == 2) 
-//     {
-//         r2.style.background = "#FFFF00";
-//         ACR = 3;
-//     } 
-//     else if (ACR == 3) 
-//     {
-//         r3.style.background = "#358A22";
-//         ACR = 1;
-//     }
+    var red = setInterval(function() {
+        var t1 = document.querySelector(".t1");
+        var t2 = document.querySelector(".t2");
+        var t3 = document.querySelector(".t3");
+        var now = new Date().getTime();
+        
+        var timeleft = countDownDate - now;
+        seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        document.querySelector("#tCount").innerHTML = seconds; 
+        // Display the color when countdown is running
+        if (seconds < 60 && seconds > 41) 
+          {
+                // clearInterval(red);
+                // l1.style.background = "#fff";
+                t3.style.background = "#111";
+                t1.style.background = "#E11218";
+          }
+          else if(seconds > 21 && seconds < 40)
+          {
+            t1.style.background = "#111";
+            t2.style.background = "#FFFF00";
+          }
+          else if(seconds > 0 && seconds < 21)
+          {
+              t2.style.background = "#111";
+              t3.style.background = "#358A22"
+          }
+        
+        }, 1000);
 
-// }
+}
+
+document.onload = setInterval(leftSignal, 0);
+document.onload = setInterval(bottomSignal, 60000); 
+document.onload = setInterval(rightSignal, 120000);
+document.onload = setInterval(topSignal, 180000) 
+
 
 // function topSignal(){
 
@@ -137,32 +188,10 @@ function leftSignal() {
 // }
 
 
-document.onload = leftSignal();
-// document.onload = setInterval(buttomSignal, 2000);
 // document.onload = setInterval(rightSignal, 3000);
 // document.onload = setInterval(topSignal, 4000);
 
 
-// The data/time we want to countdown to
-    // var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
-
-    // // Run myfunc every second
-    // var myfunc = setInterval(function() {
-
-    // var now = new Date().getTime();
-    // var timeleft = countDownDate - now;
-    // var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-    // var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-        
-    // // Result is output to the specific element
-    // document.getElementById("s1Count").innerHTML = seconds;
-        
-    // // Display the message when countdown is over
-    // if (timeleft < 0) {
-    //     clearInterval(myfunc);
-    //     document.getElementById("s1count").innerHTML = "";
-    // }
-    // }, 1000);
 
 
 
