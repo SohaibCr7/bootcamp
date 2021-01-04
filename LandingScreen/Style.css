@@ -1,0 +1,104 @@
+/* Top Line black */
+.Top-Row{
+    
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* Bottom Border Green line--------------- */
+.Bottom-Top{
+
+    background-color: green;
+    padding: 5px;
+}
+
+/* Strip Header Contact  */
+.Strip-Header{
+
+    background-color: #777;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.Strip-Header a{
+    color: #000;
+    margin-left: 20px;
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-right: 6px;
+    
+}
+
+.fa{
+    color: #000;
+   
+    
+}
+
+/* Header Section-------------------- */
+
+.Header-Container{
+    width: 100%;
+    height: auto;
+    background-color: lightgray;
+    /* Adding Flex */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.logo{
+    width: 20%;
+    margin: 20px;
+    /* padding-bottom: 0%;
+    padding-left: 75px; */
+    background-color: pink;
+    display: inline-block;
+}
+.Search-Block{
+    width: 20%;
+    margin: 20px;
+    background-color: royalblue;
+    
+}
+
+.Search-Block input{
+    height: 25px;
+    /* width: 400px; */
+
+}
+
+
+.Search-Block .btn { 
+    position: absolute; 
+    top: 0;  
+    right: 0px; 
+    z-index: 2; 
+    border: none; 
+    top: 2px; 
+    height: 29px;
+    cursor: pointer; 
+    color: white; 
+    background-color: red; 
+    transform: translateX(2px);
+} 
+
+.Gif{
+
+    width: 20%;
+    margin: 20px;
+    background-color: seagreen;
+    
+}
+
+
+
+
