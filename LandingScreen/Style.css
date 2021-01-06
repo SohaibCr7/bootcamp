@@ -16,7 +16,7 @@ body{
 /* Bottom Border Green line--------------- */
 .Bottom-Top{
 
-    background-color: green;
+    background-color:#7bae23;
     padding: 5px;
 }
 
@@ -46,32 +46,35 @@ body{
 .Header-Container{
     width: 100%;
     height: auto;
-    background-color: lightgray;
+    /* background-color: lightgray; */
     /* Adding Flex */
     display: flex;
     flex-direction: row;
-    
     justify-content: space-around;
 }
 
 .logo{
-    width: 25%;
+    /* width: 25%; */
     margin: 20px;
-    /* padding-bottom: 0%;
-    padding-left: 75px; */
-    background-color: pink;
-    display: inline-block;
+    /* padding-bottom: 0%; */
+    padding-left: 75px;
+    text-align: center;
 }
 .Search-Block{
+    
+    padding-left: 40px;
+    text-align: center;
     width: 25%;
     margin: 20px;
-    background-color: royalblue;
     
 }
 
 .Search-Block input{
-    height: 25px;
-    /* width: 400px; */
+    border-color: transparent;
+    background-color: lightgray;
+    border-radius: 5px;
+    height: 40px;
+    width: 410px;
 
 }
 
@@ -83,32 +86,41 @@ body{
     z-index: 2; 
     border: none; 
     top: 2px; 
-    height: 29px;
+    height: 42px;
     cursor: pointer; 
     color: white; 
     background-color: red; 
     transform: translateX(2px);
+    margin-top: 137px;
+    margin-right: 567px;
+    font-family: 'Times New Roman', Times, serif;
+    width: 70px;
+    font-size: 18px;
 } 
 
 .Gif{
-
+    padding-left: 100px;
+    text-align: center;
     width: 25%;
     margin: 20px;
-    background-color: seagreen;
     
 }
 
 .AddToCart{
-    background-color: teal;
+    padding-right: 40px;
+    text-align: center;
     width: 25%;
 }
 
 .fa-shopping-cart{
-    margin-top: 20px;
-    color: green;
+    margin-top: 29px;
+    color: #7bae23;
 }
 
-.Counter-Number{
+.AddToCart .Counter-Number{
+    position: absolute;
+    margin-right: 70px; 
+    margin-top: 25px;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 6px;
@@ -117,8 +129,50 @@ body{
     background-color: orange;
     font-size: 17px;
     color: white;
-    z-index: 5;
-    margin-right: 20px;
+    z-index: 2;
+}
+    
+/* Nabigation Top Bar --------------- */
+
+.Navigation-Bar{
+    background-color: #7bae23;
+    padding-left: 0;
+    padding-right: 3px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 6%;
+    margin-left: 7%;
+}
+
+.List-Items ,ul ,li{
+    list-style-type: none;
+    color: white;
+    font-size: 14px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 7px;
+    padding-right: 40px;
+}
+.List-Items{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.topnav ul li ul li{
+    display: none;
+}
+
+.topnav> ul >li:hover ul li{
+    display: block;
+}
+.topnav ul li{
+    flex-basis: 20%;
+    z-index: 1;
 }
 
 
+
+/* Image slider Css------- */
