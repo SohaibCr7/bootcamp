@@ -46,6 +46,7 @@ body{
 .Header-Container{
     width: 100%;
     height: auto;
+    
     /* background-color: lightgray; */
     /* Adding Flex */
     display: flex;
@@ -92,15 +93,15 @@ body{
     background-color: red; 
     transform: translateX(2px);
     margin-top: 137px;
-    margin-right: 567px;
+    margin-right: 570px;
     font-family: 'Times New Roman', Times, serif;
     width: 70px;
     font-size: 18px;
 } 
 
 .Gif{
-    padding-left: 100px;
-    text-align: center;
+    padding-left: 150px;
+    /* text-align: center; */
     width: 25%;
     margin: 20px;
     
@@ -113,14 +114,18 @@ body{
 }
 
 .fa-shopping-cart{
+    position: relative;
     margin-top: 29px;
+    margin-right: 1px;
     color: #7bae23;
+    padding-right: 50px;
 }
 
-.AddToCart .Counter-Number{
+.Counter-Number{
     position: absolute;
-    margin-right: 70px; 
-    margin-top: 25px;
+    margin-left: 87%;
+    /* margin-right: 20px;  */
+    margin-top: 20px;
     padding-top: 2px;
     padding-bottom: 2px;
     padding-right: 6px;
@@ -141,15 +146,16 @@ body{
     padding-top: 0;
     padding-bottom: 0;
     margin-right: 6%;
-    margin-left: 7%;
+    margin-left: 6.5%;
+    position: relative;
 }
 
 .List-Items ,ul ,li{
     list-style-type: none;
     color: white;
-    font-size: 14px;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     padding-left: 7px;
     padding-right: 40px;
 }
@@ -158,21 +164,123 @@ body{
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.topnav ul li ul li{
+#MoreBlock {
     display: none;
 }
 
-.topnav> ul >li:hover ul li{
+#more:hover ul#MoreBlock {
     display: block;
-}
-.topnav ul li{
-    flex-basis: 20%;
-    z-index: 1;
+    
 }
 
+#MoreBlock ul li{
+    
+    color: black;
+}
+
+#more:hover ul#MoreBlock{
+  display: flex;
+  background-color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.71);
+  border-top: 5px solid skyblue;
+  position: absolute;
+  left: 0;
+  top: 37px;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+/* Image slider Css-----------*/
+
+/* image styling */
+
+/* * {box-sizing: border-box;} */
+
+.mySlides {
+    display: none;
+}
+/* img {
+    vertical-align: middle;
+} */
+
+/* Slideshow container */
+.slideshow-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.Left-Images{
+    
+    width: 23%;
+    margin-left: 89px;
+    padding-right: 0px;
+}
+
+.slider{
+    
+    width: 67%;
+    margin-right: 82px;
+    /* padding-left: 20px; */
+    /* padding-right: 80px; */
+}
 
 
-/* Image slider Css------- */
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot{
+  height: 5px;
+  width: 21px;
+  margin: 0 2px;
+  background-color:gray;
+  position: relative;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index: 1;
+}
+
+
+.active {
+  background-color:black;
+  position: absolute;
+  bottom: 10%;
+  margin-left: 30%;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}

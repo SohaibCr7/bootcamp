@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hum Mart</title>
     <link rel="stylesheet" href="Style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     <section>
@@ -61,8 +58,8 @@
 
         <div class="Adding AddToCart">
           <i class="fa fa-shopping-cart" style="font-size: 36px"></i>
-          <span class="Counter-Number">0</span>
         </div>
+        <span class="Counter-Number">0</span>
       </div>
     </section>
     <!-- Nevigation Bar Starts -->
@@ -76,24 +73,138 @@
                     <li><a><span class="nav">Break fast &amp; Dairy</span></a></li>
                     <li><a><span class="nav">Baby Kids &amp; toys</span></a></li>
                     <li><a><span class="nav">Beverages</span></a></li>
-                    <li><a><span class="nav-hover">more </span></a>
-                        <ul>
-                            <li><a href="#">Fruit and vegetable</a></li>
-                            <li><a href="#">Personal Care</a></li>
-                            <li><a href="#">Furnashing &amp; Home Need</a></li>
+                    <li id="more">
+                        <a><span>more</span></a>
+                        <ul id="MoreBlock">
+                            <li>
+                                <ul>
+                                    <li onmouseover="hoverFunc(event)">Fruits</li>
+                                    <li onmouseover="hoverFunc(event)">Presonal Care</li>
+                                    <li onmouseover="hoverFunc(event)">Furnishing</li>
+                                    <li onmouseover="hoverFunc(event)">Ice Cream</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li onmouseover="hoverFunc(event)">Home Services</li>
+                                    <li onmouseover="hoverFunc(event)">Pharmacy</li>
+                                    <li onmouseover="hoverFunc(event)">Pet Care</li>
+                                    <li onmouseover="hoverFunc(event)">Other Categories</li>
+                              </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li onmouseover="hoverFunc(event)">Mobile Tablets</li>
+                                    <li onmouseover="hoverFunc(event)">House Holds</li>
+                                    <li onmouseover="hoverFunc(event)">Meat & Sea Foods</li>
+                                    <li onmouseover="hoverFunc(event)">Corona Essential</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li onmouseover="hoverFunc(event)">Electronics</li>
+                                    <li onmouseover="hoverFunc(event)">Home & Kitchen</li>
+                                    <li onmouseover="hoverFunc(event)">Offer</li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
-                </ul>
+                </ul> 
             </div>
-          </div>
+        </div>
     </section>
     <!-- Nevigation bar Ends -->
 
     <!-- Image slider starts -->
-    <section class="Image-Slider">
-        <div class="">
+    <section class="Images-Section">
+        <div class="Main-Image-Tag"></div>
 
+            <!-- Slider Images div-->
+            <div class="slideshow-container">
+                
+                 <!-- Left Images -->
+                <div class="Left-Images">
+                    
+                    <div class="Imgs left1">
+                        <img src="D:\githubprojects\LandingScreen\images\meat.jpg" alt="Meat" srcset="" height="215px">
+                    </div>
+                    
+                    <div class="Imgs left2">
+                        <img src="D:\githubprojects\LandingScreen\images\bundle-offers.jpg" alt="Meat" srcset="" height="212px">
+                    </div>
+                </div>
+                <div class="slider">
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 7</div>
+                        <img src="D:\githubprojects\LandingScreen\images\1.jpg" style="width:100%">
+                      </div>
+                      
+                      <div class="mySlides fade">
+                        <div class="numbertext">2 / 7</div>
+                        <img src="D:\githubprojects\LandingScreen\images\2.jpg" style="width:100%">
+                      </div>
+                      
+                      <div class="mySlides fade">
+                        <div class="numbertext">3 / 7</div>
+                        <img src="D:\githubprojects\LandingScreen\images\3.jpg" style="width:100%">
+                      </div>
+      
+                      <div class="mySlides fade">
+                          <div class="numbertext">4 / 7</div>
+                          <img src="D:\githubprojects\LandingScreen\images\4.jpg" style="width:100%">
+                      </div>
+      
+                      <div class="mySlides fade">
+                          <div class="numbertext">5 / 7</div>
+                          <img src="D:\githubprojects\LandingScreen\images\5.jpg" style="width:100%">
+                      </div>
+      
+                      <div class="mySlides fade">
+                          <div class="numbertext">6 / 7</div>
+                          <img src="D:\githubprojects\LandingScreen\images\6.jpg" style="width:100%">
+                      </div>
+      
+                      <div class="mySlides fade">
+                          <div class="numbertext">7 / 7</div>
+                          <img src="D:\githubprojects\LandingScreen\images\7.jpg" style="width:100%">
+                      </div> 
+                </div>    
+            </div>
+        </div>
+        <div class="Dots">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span>
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
         </div>
     </section>
+    <!-- Image Slider Ends -->
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 1000); // Change image every 2 seconds
+        }
+    </script>
   </body>
 </html>
