@@ -199,7 +199,6 @@ body{
 
 /* image styling */
 
-/* * {box-sizing: border-box;} */
 
 .mySlides {
     display: none;
@@ -208,11 +207,11 @@ body{
     vertical-align: middle;
 } */
 
-/* Slideshow container */
+/* Slideshow container starts */
 .slideshow-container {
     width: 100%;
     height: auto;
-    position: relative;
+    /* position: relative; */
     display: flex;
     /* justify-content: space-between; */
 }
@@ -224,12 +223,10 @@ body{
     padding-right: 0px;
 }
 
-.slider{
-    
+.slider{  
     width: 67%;
     margin-right: 82px;
-    /* padding-left: 20px; */
-    /* padding-right: 80px; */
+    position: relative;
 }
 
 
@@ -247,19 +244,22 @@ body{
   height: 5px;
   width: 21px;
   margin: 0 2px;
+  /* margin-bottom: 100px; */
   background-color:gray;
-  position: relative;
   display: inline-block;
   transition: background-color 0.6s ease;
   z-index: 1;
+  
+}
+.Dots{
+    position: relative;
 }
 
 
 .active {
   background-color:black;
-  position: absolute;
-  bottom: 10%;
-  margin-left: 30%;
+  /* position: absolute; */
+  /* margin-bottom: 60%; */
 }
 
 /* Fading animation */
@@ -281,6 +281,78 @@ body{
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .text {font-size: 11px}
+}
+
+/* features styling */
+.Features {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+   
+    /* Adding Flex */
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: wrap;
+
+}
+
+.main{
+    width: 50%;
+    height: 130px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-left: 45px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-grow: 5;
+    justify-content: space-between;
+    
+}
+
+.main p{
+    
+    color: grey;
+}
+
+.main .text{
+    margin-left: 60px;
+}
+
+.feature-li{
+    display: inline-block;
+    position: absolute;
+    padding-top: 5%;
+    padding-left: 23px;
+    font-size: 24px;
+}
+
+  
+/* features styling end */
+
+/* Bundle Offer CSS-------------- */
+
+.Bundle-Offer-Container{
+    width: 100%;
+    height: 50%;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+}
+
+.Bundle-Heading{
+    padding-top: 20px;
+    margin-left: 85px;
+    margin-right: 85px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+
+.radio-buttions{
+    /* float: right; */
+    position: absolute;
+    padding-left: 90%;
+    top: 50px;
+
 }

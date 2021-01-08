@@ -164,7 +164,7 @@
                           <div class="numbertext">6 / 7</div>
                           <img src="D:\githubprojects\LandingScreen\images\6.jpg" style="width:100%">
                       </div>
-      
+    
                       <div class="mySlides fade">
                           <div class="numbertext">7 / 7</div>
                           <img src="D:\githubprojects\LandingScreen\images\7.jpg" style="width:100%">
@@ -172,7 +172,7 @@
                 </div>    
             </div>
         </div>
-        <div class="Dots">
+        <div class="Dots" style="margin-left: 35%;">
             <span class="dot"></span> 
             <span class="dot"></span> 
             <span class="dot"></span>
@@ -184,7 +184,73 @@
     </section>
     <!-- Image Slider Ends -->
 
+     <!-- Features -->
+    <section>
+     <div class="Features">
+       
+        <div class="featureBody1 main">
+            <div class="feature-li">
+                <i class="fa fa-truck" aria-hidden="true" style="color: #7bae23"></i>
+            </div>
 
+            <div class="text">
+                <h3>Same/Next Day Delivery</h3>
+                <p>Free delivery on all orders over Rs. 3,000 Rs 100 for orders below Rs. 3,000
+                    Flat Rs 200 for Same Day orders</p>
+            </div>
+        </div>
+
+        <div class="features2Body main">
+            <div class="feature-li">
+                <i class="fa fa-money-bill-alt" aria-hidden="true" style="color: #7bae23"></i>
+            </div>
+            
+            <div class="text">
+                <h3>Cash on Delivery</h3>
+              <p>You pay when rider comes at your address.</p>
+            </div>  
+          </div>
+
+          <div class="features3Body main">
+              <div class="feature-li">
+                <i class="fa fa-phone" aria-hidden="true" style="color: #7bae23"></i>
+              </div>
+            
+            <div class="text">
+                <h3>Online Support</h3>
+                <p> Customer support from 9AM - Midnight <br>
+                (021)111 116 278</p>
+            </div>
+            
+          </div>
+     </div>
+    </section>
+      <!-- features End -->
+
+      <!-- Bundle Offers Start -->
+
+      <section>
+          <div class="Bundle-Offer-Container">
+              <div class="Bundle-Heading">
+                <h3>NEW BUNDLE OFFERS</h3>
+                <div class="radio-buttions">
+                    <input type="radio" id="first-btn" name="btnOne" onclick="radiobutton1()">
+                    <input type="radio" id="second-btn" name="btnTwo" onclick="radiobutton2()">
+                </div>
+                <hr>
+              </div>
+
+              <div class="Bundle-Offer-Images">
+                  <img src="D:\githubprojects\LandingScreen\images\shildbottle.jpg" alt="Shield Bottle" srcset="">
+                  <img src="D:\githubprojects\LandingScreen\images\shampuimage.jpg" alt="" srcset="">
+              </div>
+          </div>
+      </section>
+
+
+      <!-- Bundle offer ends -->
+
+<!-- Top Banner Script -->
     <script>
         var slideIndex = 0;
         showSlides();
@@ -203,7 +269,7 @@
           }
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 1000); // Change image every 2 seconds
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
         }
     </script>
   </body>
