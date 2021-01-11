@@ -6,6 +6,7 @@
     <title>Hum Mart</title>
     <link rel="stylesheet" href="Style.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js" async></script>
   </head>
   <body>
     <section>
@@ -230,47 +231,105 @@
       <!-- Bundle Offers Start -->
 
       <section>
-          <div class="Bundle-Offer-Container">
+        <div class="Bundle-Offer-Container">
               <div class="Bundle-Heading">
                 <h3>NEW BUNDLE OFFERS</h3>
-                <div class="radio-buttions">
-                    <input type="radio" id="first-btn" name="btnOne" onclick="radiobutton1()">
-                    <input type="radio" id="second-btn" name="btnTwo" onclick="radiobutton2()">
-                </div>
-                <hr>
+                    <div class="radio-buttons">
+                        <input type="radio" name="tab" onclick="show1()" checked="checked">
+                        <input type="radio" name="tab" onclick="show2()">
+                    </div>
+                    <hr>
               </div>
 
-              <div class="Bundle-Offer-Images">
-                  <img src="D:\githubprojects\LandingScreen\images\shildbottle.jpg" alt="Shield Bottle" srcset="">
-                  <img src="D:\githubprojects\LandingScreen\images\shampuimage.jpg" alt="" srcset="">
-              </div>
-          </div>
+              <!-- First 4 Cards Container -->
+        
+                <div class="Bundle-Offer-Images" id="First-Container">
+                  <!-- First Product Card -->
+                    <div class="card">
+                        <img src="D:\githubprojects\LandingScreen\images\shampuimage2.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                        <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                        <strike>Rs. 80</strike>
+                        <p class="price">$19.99</p>
+                        <p><button class="w3-button w3-black w3-round-xlarge">Add to Cart</button></p>
+                    </div>
+
+                <!-- Second Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\shampuimage2.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <!-- Third Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\shampuimage2.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button>Add to Cart</button></p>
+                </div>
+
+                <!-- Fourth Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\shampuimage2.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button >Add to Cart</button></p>
+                </div>
+
+                <!-- First Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\juice.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button >Add to Cart</button></p>
+                </div>
+                <!-- second Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\juice.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button >Add to Cart</button></p>
+                </div>
+                <!-- third Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\juice.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button >Add to Cart</button></p>
+                </div>
+                 <!-- fourth Product Card -->
+                <div class="card">
+                    <img src="D:\githubprojects\LandingScreen\images\juice.jpg" alt="Sunsilk-Shampu" width="200px" height="200px">
+                    <a href="#">BUY Nestle Everyday Original 900 gm GET 5 Everyday Lite
+                        Sachet 8.3 gm FREE</a><br><br>
+                    <strike>Rs. 80</strike>
+                    <p class="price">$19.99</p>
+                    <p><button >Add to Cart</button></p>
+                </div>
+            </div>
+
+            <!-- Second 4 Cards Container -->
+
+            
+            <!-- Second 4 Cards Container Ends -->
+        </div>
       </section>
 
 
       <!-- Bundle offer ends -->
-
-<!-- Top Banner Script -->
-    <script>
-        var slideIndex = 0;
-        showSlides();
-        
-        function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("dot");
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}    
-          for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-          }
-          slides[slideIndex-1].style.display = "block";  
-          dots[slideIndex-1].className += " active";
-          setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
-    </script>
   </body>
 </html>

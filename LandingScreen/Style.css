@@ -336,23 +336,103 @@ body{
 
 .Bundle-Offer-Container{
     width: 100%;
-    height: 50%;
+    height: 558px;
     background-color: #f9f9f9;
     margin-top: 40px;
+    /* position:absolute; */
+    
 }
 
 .Bundle-Heading{
     padding-top: 20px;
-    margin-left: 85px;
-    margin-right: 85px;
+    margin-left: 106px;
+    margin-right: 106px;
     font-family: 'Times New Roman', Times, serif;
-    position: relative;
+    /* position: relative; */
 }
 
-.radio-buttions{
+.radio-buttons{
     /* float: right; */
     position: absolute;
-    padding-left: 90%;
+    padding-left: 92%;
     top: 50px;
 
 }
+
+/* Card Css */
+.card {
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+    /* width: 202px;
+    height: 200px; */
+    font-family: arial;
+    
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  
+  .card button {
+    /* position: relative; */
+    border: none;
+    outline: 0;
+    color: white;
+    background-color: darkorange;
+    
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 16px;
+    top: 210px;
+    margin-left: 110px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .card a{
+      
+      color: gray;
+      text-decoration: none;
+      margin-top: 500px;
+  }
+
+  .card strike{
+      opacity: 0.5;
+  }
+
+  .Bundle-Offer-Images{
+      display: flex;
+      flex-direction: row;
+      /* justify-content: space-evenly; */
+      width: 1138px;
+      height: 450px;
+      overflow-x: scroll;
+      margin-left: 106px;
+  }
+
+.card{
+    padding-left: 40px;
+  }
+
+  .card img:hover{
+    box-shadow: 0px 29px 18px 7px rgba(7, 0, 0, 0.2);
+    opacity: 0.9;
+  }
+
+  .card a:hover{
+    text-decoration: underline;
+  }
+
+ 
+
+  
+  
+
+
