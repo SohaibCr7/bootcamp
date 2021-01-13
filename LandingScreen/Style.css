@@ -1,4 +1,6 @@
-
+body {
+  margin: auto;
+}
 /* Top Line black */
 .Top-Row {
   background-color: black;
@@ -42,73 +44,69 @@
   /* Adding Flex */
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
 }
 
 .logo {
-  margin: 20px;
-  padding-left: 77px;
-  text-align: center;
+    width: 20%;
+    padding-top: 23px;
+    padding-left: 90px;
 }
 .Search-Block {
-  padding-left: 40px;
-  text-align: center;
-  width: 25%;
-  margin: 20px;
+  width: 550px;
+  margin-top: 19px;
+  display: flex;
+  justify-content: space-between;
+  
 }
 
 .Search-Block input {
+  width: 550px;
+  height: 38px;
   border-color: transparent;
   background-color: lightgray;
-  border-radius: 5px;
-  height: 40px;
-  width: 420px;
+  border-radius: 4px;
+  
 }
 
-.Search-Block .btn {
-  position: absolute;
-  right: 0px;
+.Search-Block button {
+  
   z-index: 1;
   border: none;
-  top: 2px;
-  height: 45px;
+  height: 43px;
   cursor: pointer;
   color: white;
   background-color: red;
-  transform: translateX(2px);
-  margin-top: 136px;
-  margin-right: 543px;
+  /* transform: translateX(420px); */
+  
   font-family: "Times New Roman", Times, serif;
   width: 70px;
   font-size: 18px;
 }
 
-.Gif {
-  padding-left: 140px;
-  /* text-align: center; */
-  width: 25%;
-  margin: 20px;
+.Gif{
+  width: 11%;
+  
+  padding-top: 15px;
+  margin-left: 37px;
+  
 }
 
-.AddToCart {
-  padding-right: 40px;
-  text-align: center;
-  width: 25%;
+.Adding {
+   width: 13%;
+   display: flex;
+   justify-content: space-between;
 }
 
 .fa-shopping-cart {
-  position: relative;
+  position: absolute;
   margin-top: 29px;
-  margin-right: 1px;
   color: #7bae23;
-  padding-right: 50px;
+  padding-left: 124px;
+  
 }
 
 .Counter-Number {
-  position: absolute;
-  margin-left: 87%;
-  /* margin-right: 20px;  */
-  margin-top: 20px;
+  position: relative;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 6px;
@@ -117,6 +115,10 @@
   background-color: orange;
   font-size: 17px;
   color: white;
+
+  margin-left: 150px;
+  margin-top: 18px;
+  margin-bottom: 24px;
   z-index: 2;
 }
 
@@ -169,6 +171,7 @@ li {
   background-color: white;
   flex-direction: row;
   justify-content: space-around;
+  z-index: 2;
   box-shadow: 0px 1px 16px -4px rgba(0, 0, 0, 0.71);
   border-top: 5px solid skyblue;
   position: absolute;
@@ -580,19 +583,10 @@ li {
   padding-left: 110px;
 }
 
-@media screen and (max-width: 600px) {
-  /* For mobile phones: */
-  .Container1,
-  .Header-Container,
-  .Navigation-Bar,
-  .Main-Image-Tag,
-  .Features,
-  .Bundle-Offer-Container,
-  .category-responsive,
-  .Delivary-Details,
-  .blank-container,
-  .Footer-Section,
-  .Footer-Bottom-CashDetails{
-    width: 100%;
+@media only screen and (max-width: 800px) {
+    .Header-Container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
   }
-}
