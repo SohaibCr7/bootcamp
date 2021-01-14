@@ -20,6 +20,17 @@ var slideIndex = 0;
         }
 
 
+        // var navbar = document.getElementById("navBar");
+        // var navTop = navbar.offsetTop;
+        
+        // function fixedNav() {
+        //   if (window.pageYOffset >= navTop) {
+        //     navbar.classList.add("fixed")
+        //   } else {
+        //     navbar.classList.remove("fixed");
+        //   }
+        // }
+        // window.addEventListener('scroll',fixedNav)
 
 // function show1(){
 //     document.getElementById('First-Container').style.display ='block';
