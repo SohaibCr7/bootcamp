@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" async></script>
+  </head>
+  <body>
     <nav class="menu-container">
-        <div class="flex">
-          <div class="flex-spacer" id="main">
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Store</a>
-                <a href="#">Orders</a>
-                <a href="#">Items</a>
-                <a href="#">Rewards</a>
-                <a href="#">Admin</a>
-                <a href="#" class="active-menu">Concierge</a>
-                <a href="#">OMNI Ops</a>
-                <a href="#">Shipment</a>
-                <a href="#">Mass Upload</a>
-              </div>
-            <ul class="ccui-menu">
-                <li class="icon"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></li>
-              <li id="store-link">
-                <!-- onClick={() => openCCUITab("store")} -->
-                <a>Store</a>
-              </li>
-              <li id="orders-link">
-                <!-- onClick={() => openCCUITab("orders")} -->
-                <a>Orders</a>
-              </li>
-              <li id="items-link">
-                <!-- onClick={() => openCCUITab("items")} -->
-                <a>Items</a>
-              </li>
-              <li id="rewards-link">
-                <!-- onClick={() => openCCUITab("rewards")} -->
-                <a>Rewards</a>
-              </li>
-              <li id="admin-link">
-                <!-- onClick={() => openCCUITab("admin")} -->
-                <a>Admin</a>
-              </li>
-              <li>
-                <a class="active-menu">Concierge</a>
-              </li>
-              <li id="supplyChainOperations-link">
-                <!-- onClick={() => openCCUITab("supplyChainOperations")} -->
-                <a> OMNI Ops </a>
-              </li>
-              <li id="shipment-link">
-                <!-- onClick={() => openCCUITab("shipment")} -->
-                <a>Shipment</a>
-              </li>
-              <li id="massupload-link">
-                <!-- onClick={() => openCCUITab("massupload")} -->
-                <a>Mass Upload</a>
-              </li>
-            </ul>
+      <div class="flex">
+        <div class="flex-spacer" id="main">
+          <div
+            id="side-nav-overlay"
+            class="side-nav-overlay"
+            onclick="closeSidebar()"
+            style="width: 0%; opacity: 0"
+          ></div>
+          <div id="mySidenav" class="sidenav" style="width: 0%">
+            <a href="javascript:void(0)" id="closebtn" onclick="closeSidebar()"
+              ><img src="times-solid.svg" width="20px"
+            /></a>
+            <a class="store-link" href="#">Store</a>
+            <a class="orders-link" href="#">Orders</a>
+            <a class="items-link" href="#">Items</a>
+            <a class="rewards-link" href="#">Rewards</a>
+            <a class="admin-link" href="#">Admin</a>
+            <a href="#" class="active-menu">Concierge</a>
+            <a class="supplyChainOperations-link" href="#">OMNI Ops</a>
+            <a class="shipment-link" href="#">Shipment</a>
+            <a class="massupload-link" href="#">Mass Upload</a>
           </div>
-          <div id="quick-search">
+          <ul class="ccui-menu">
+            <li class="icon">
+              <span
+                style="font-size: 30px; cursor: pointer"
+                id="openNav"
+                onclick="openSidebar()"
+                ><img src="bars-solid.svg"
+              /></span>
+            </li>
+            <li class="store-link">
+              <!-- onClick={() => openCCUITab("store")} -->
+              <a>Store</a>
+            </li>
+            <li class="orders-link">
+              <!-- onClick={() => openCCUITab("orders")} -->
+              <a>Orders</a>
+            </li>
+            <li class="items-link">
+              <!-- onClick={() => openCCUITab("items")} -->
+              <a>Items</a>
+            </li>
+            <li class="rewards-link">
+              <!-- onClick={() => openCCUITab("rewards")} -->
+              <a>Rewards</a>
+            </li>
+            <li class="admin-link">
+              <!-- onClick={() => openCCUITab("admin")} -->
+              <a>Admin</a>
+            </li>
+            <li>
+              <a class="active-menu">Concierge</a>
+            </li>
+            <li class="supplyChainOperations-link">
+              <!-- onClick={() => openCCUITab("supplyChainOperations")} -->
+              <a> OMNI Ops </a>
+            </li>
+            <li class="shipment-link">
+              <!-- onClick={() => openCCUITab("shipment")} -->
+              <a>Shipment</a>
+            </li>
+            <li class="massupload-link">
+              <!-- onClick={() => openCCUITab("massupload")} -->
+              <a>Mass Upload</a>
+            </li>
+          </ul>
+        </div>
+        <div id="quick-search">
+          <form>
             <!-- <select-group value="qos-zipCode" class="InputGroup simple"> -->
             <select value="qos-orderNo">
               <option value="qos-orderNo">Order #</option>
@@ -84,72 +100,74 @@
               />
               <button type="submit"></button>
             </div>
-            <div class="wsimodel-form" id="qos-zipCode">
-              <input
-                required=""
-                name="lastName"
-                type="text"
-                placeholder="Ex. 'Doe'"
-                title="To use wildcards, enter at least two characters followed by an asterisk: 'Jo*'"
-                class="simple"
-              />
-              <input
-                required=""
-                name="zipCode"
-                type="text"
-                placeholder="Ex. '12345'"
-                pattern=".{5,}"
-                title="Enter at least 5 characters."
-                class="simple"
-              />
-              <button type="submit"></button>
-            </div>
-            <div class="wsimodel-form" id="qos-contactNo">
-              <input
-                required=""
-                name="contactNo"
-                type="phone"
-                placeholder="Ex. '123-456-7890'"
-                title="Enter a 10 digit phone number."
-                class="simple"
-              />
-              <button type="submit"></button>
-            </div>
-            <div class="wsimodel-form" id="qos-emailId">
-              <input
-                required=""
-                name="emailId"
-                type="email"
-                placeholder="Ex. 'cust@domain.com'"
-                title="Enter a valid email address."
-                class="simple"
-              />
-              <button type="submit"></button>
-            </div>
-            <div class="wsimodel-form" id="qos-workOrderNo">
-              <input
-                required=""
-                name="workOrderNo"
-                type="text"
-                placeholder="Ex. '1234567'"
-                title="Enter a valid work order number."
-                class="simple"
-              />
-              <button type="submit"></button>
-            </div>
-            <div class="wsimodel-form" id="qos-externalOrderNo">
-              <input
-                required=""
-                name="externalOrderNo"
-                type="text"
-                placeholder="Ex. '1234567890'"
-                title="Enter a valid external order number."
-                class="simple"
-              />
-              <button type="submit"></button>
-            </div>
-          </div>
+
+            <!-- <div class="wsimodel-form" id="qos-zipCode">
+                <input
+                  required=""
+                  name="lastName"
+                  type="text"
+                  placeholder="Ex. 'Doe'"
+                  title="To use wildcards, enter at least two characters followed by an asterisk: 'Jo*'"
+                  class="simple"
+                />
+                <input
+                  required=""
+                  name="zipCode"
+                  type="text"
+                  placeholder="Ex. '12345'"
+                  pattern=".{5,}"
+                  title="Enter at least 5 characters."
+                  class="simple"
+                />
+                <button type="submit"></button>
+              </div>
+              <div class="wsimodel-form" id="qos-contactNo">
+                <input
+                  required=""
+                  name="contactNo"
+                  type="phone"
+                  placeholder="Ex. '123-456-7890'"
+                  title="Enter a 10 digit phone number."
+                  class="simple"
+                />
+                <button type="submit"></button>
+              </div>
+              <div class="wsimodel-form" id="qos-emailId">
+                <input
+                  required=""
+                  name="emailId"
+                  type="email"
+                  placeholder="Ex. 'cust@domain.com'"
+                  title="Enter a valid email address."
+                  class="simple"
+                />
+                <button type="submit"></button>
+              </div>
+              <div class="wsimodel-form" id="qos-workOrderNo">
+                <input
+                  required=""
+                  name="workOrderNo"
+                  type="text"
+                  placeholder="Ex. '1234567'"
+                  title="Enter a valid work order number."
+                  class="simple"
+                />
+                <button type="submit"></button>
+              </div>
+              <div class="wsimodel-form" id="qos-externalOrderNo">
+                <input
+                  required=""
+                  name="externalOrderNo"
+                  type="text"
+                  placeholder="Ex. '1234567890'"
+                  title="Enter a valid external order number."
+                  class="simple"
+                />
+                <button type="submit"></button>
+              </div> -->
+          </form>
         </div>
-      </nav>
-</body>
+      </div>
+    </nav>
+  </body>
 </html>
