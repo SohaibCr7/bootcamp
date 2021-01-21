@@ -40,30 +40,21 @@
           </div>-->
 
           <div class="header">
-              <p id="price">Total Price = 0</p>
+              <p class="price">Total Price = 0</p>
               <p id="select">Selected Items = 0</p>
           </div>
 
           <div class="Products" id="products">
-              <img src="C:\Users\msohaib\Desktop\images.jpg" alt="Shampu" height="200px" width="200px">
-              <button onclick="renderProduct1();">Add To Card</button>
+              <img id="I" src="C:\Users\msohaib\Desktop\images.jpg" alt="Shampu" height="200px" width="200px">
               <p id="desc">Sunsilk Shampu, This product is created by Pata Nahi</p>
-              <p class="price" >Rs.30000</p>
+              <p id="price" >Rs.30000</p>
+              <button onclick="Save();">Add To Card</button>
+              <a href="#" target=""><button onclick="View();">Check Out</button></a>
           </div>
-          <div class="Products" id="products">
-            <img src="C:\Users\msohaib\Desktop\maggi.png" alt="Shampu" height="200px" width="200px">
-            <button onclick="renderProduct2();">Add To Card</button>
-            <p id="desc">Maggi </p>
-            <p class="price" >Rs.30000</p>
-        </div>
 
-            <div id="productsList"></div>
-
-            <div id="localData">
-                <h1>Local Storage OutPut</h1>
-                
+            <div id="productsList">
+              <h3 style="text-align: center;">Data Of Local Storage</h3>
             </div>
-
         </div>
       </section>
     </div>

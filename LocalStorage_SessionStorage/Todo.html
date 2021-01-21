@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO With Local_Storage </title>
+</head>
+<body>
+    <div>
+        <input type="text" id="input" width="12.5%" placeholder="Text" style="padding-left: 10px;">
+        <button onclick="save()">Save</button>
+        <button onclick="view()">View</button>
+    </div>
+    <div id="viewData"></div>
+</body>
+
+<script>
+    function save(){
+        if( input.value.length === 0)
+        {
+            alert("Enter Value in the required field");
+            document.getElementById("input").style.borderColor = "red"
+        }
+        else{
+        //Getting data from input field
+        var new_data = document.getElementById('input').value;
+
+        // If storage is empty so save new data 
+        if(localStorage.getItem('data') == null){
+            localStorage.setItem('data','[]')
+        }
+
+        // Old data and swap with new data.
+        var old_data = JSON.parse(localStorage.getItem('data'));
+        old_data.push(new_data);
+
+        // Save the old data with new data in local storage.
+        localStorage.setItem('data', JSON.stringify(old_data));
+
+        document.getElementById('input').value = " ";
+        }
+    }
+
+    function view() {
+        // IF data is exeist then show in div.
+        if(localStorage.getItem('data') !=null)
+        {
+            var data_div = document.getElementById('viewData');
+            var h1Element = document.createElement('h1');
+            var Node = document.createTextNode(JSON.parse(localStorage.getItem('data')));
+            h1Element.appendChild(Node);
+            data_div.appendChild(h1Element);
+        }
+    }
+</script>
+</html>
