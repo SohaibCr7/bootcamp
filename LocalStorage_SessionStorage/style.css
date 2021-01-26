@@ -33,31 +33,11 @@
     padding: 10px;
     
 }
-/* .Products button{
-    float: right;
-    padding: 15px;
-    
-    border-radius: 30px;
-    border: none;
-    background-color: orange;
-    color: white;
-}
 
-.Products button:hover{
-    opacity: 1;
-    right: 0;
-    right: -20px;
-    transition: 0.5s;
-    background-color: #f4511e;
-     
-}*/
 
 #productsList{
-    margin-top: 30px;
-    width: 100%;
-    /* display: flex;
-    flex-direction: row; */
     
+    width: 100%;
     border: 3px solid black;
 }
 .p{
@@ -98,4 +78,18 @@
     transition: 0.5s;
     background-color: #f4511e;
      
+}
+
+.CheckOut{
+    position: absolute;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    border: transparent;
+    background-color: red;
+    color: white;
+    /* margin-left: 450px; */
+    top: 30px;
+    right: 10px;
+    text-decoration: none;
 }
