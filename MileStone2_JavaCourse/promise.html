@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+</head>
+
+<body>
+    <h2 id="demo"></h2>
+    <h2 id="demo2"></h2>
+    <h2 id="demo3"></h2>
+    <h2 id="demo4"></h2>
+    <h2 id="demo5"></h2>
+    <h2 id="demo6"></h2>
+    <h2 id="demo7"></h2>
+    <h2 id="demo8"></h2>
+    <h2 id="demo9"></h2>
+    <h2 id="demo10"></h2>
+
+    <h1>Call Back Example</h1>
+    <h2 id="call"></h2>
+</body>
+
+<script>
+    let myPromise = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve("Programming....! Test");
+        }, 2000);
+    });
+    myPromise.then(function(value) {
+        document.getElementById("demo").innerHTML = value;
+    });
+    myPromise.catch(function(value) {
+        document.getElementById("demo").innerHTML = "ERROR" + value;
+    });
+
+    function sum(...args) {
+        let sum = 0;
+        for (let i of args) sum += i;
+        return sum;
+    }
+    let add = sum(4, 55, 100, 200);
+    document.getElementById("demo2").innerHTML = add;
+
+    var num = [8, 5, 4, 15, 19];
+
+    var first = num.find(myFun);
+    document.getElementById("demo3").innerHTML = first;
+
+    function myFun(value, index, array) {
+        return value > 5;
+    }
+
+    var number = [8, 5, 4, 15, 19];
+
+    var first = number.findIndex(myFun);
+    document.getElementById("demo4").innerHTML = first;
+
+    function myFun(value, index, array) {
+        return value > 5;
+    }
+
+    var x = Number.EPSILON;
+    document.getElementById("demo5").innerHTML = x;
+
+    var y = Number.MIN_SAFE_INTEGER;
+    document.getElementById("demo6").innerHTML = y;
+
+    var z = Number.MAX_SAFE_INTEGER;
+    document.getElementById("demo7").innerHTML = z;
+
+    var myInteger = Number.isInteger(10);
+    document.getElementById("demo8").innerHTML = "Has Int Value: " + myInteger;
+
+    var integerNot = Number.isInteger(10.8);
+    document.getElementById("demo9").innerHTML =
+        "Has Not Int Value: " + integerNot;
+
+    // Call Back Example
+    function myDisplayer(some) {
+        document.getElementById("demo10").innerHTML = some;
+    }
+
+    function myFirst() {
+        myDisplayer("Hello");
+    }
+
+    function mySecond() {
+        myDisplayer("Goodbye");
+    }
+
+    mySecond();
+    myFirst();
+
+    // Second Example Of Call Back
+
+    setTimeout(function() {
+
+    }, 3000)
+
+    function myDisplayer(some) {
+        document.getElementById("call").innerHTML = some;
+    }
+
+    function myCalculator(num1, num2, myCallback) {
+        let sum = num1 + num2;
+        myCallback(sum);
+    }
+
+    myCalculator(5, 5, myDisplayer);
+</script>
+
+</html>
