@@ -1,53 +1,42 @@
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
-import './App.css';
-import coding from "./coding.jpg";
+// https://api.github.com/users/SohaibCr7
 
-function Header(props){
 
-  return(
-    <header>
-      <h1>{props.name}</h1>
-    </header>
-  );
-}
+function App({login}) {
 
-function Main(props){
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if(!login) return;
+    setLoading(true);
+    fetch(`https://api.github.com/users/${login}`)
+    .then((response) => response.json())
+    .then(setData)
+    .then(() => setLoading(false))
+    .catch(setError);
   
-  return(
-  <section>
-    <p> Build <b>{props.adjective}</b> together....!</p>
+  }, [login]);
 
-    <img src= "https://avatars.githubusercontent.com/u/64433180?s=460&u=8ff38811d2082fcffb33421175fd7a6c4ddfa494&v=4" width={250} height={200} alt="SohaibFarooqui"/>
-    <img src={coding} height= {200} width={250} alt="Codeing On React"/>
-    <ul style={{textAlign: 'left'}}>
-    { props.cars.map((cars) => ( <li key = { cars.id }> { cars.title } </li>) ) }
-    </ul>
-  </section>);
-}
+  if(loading) 
+        return <h1>Loading.....!</h1>;
+  if(error)
+        return <pre>{JSON.stringify(error, null, 2)}</pre>;
+  if(!data)
+        return null;
 
-function Footer(props){
-  return(
-    <h3>CopyRigths {props.year}</h3>
-  );
-}
+    return (
+      <div>
+        <h1>{data.name}</h1>
+        <p>{data.location}</p>
+        <img alt={data.login} src={data.avatar_url} width={250} height={200}></img>
+      </div>
+    );
+    
 
-const cars = [
-  "BMW",
-  "AUDI",
-  "VEZUL",
-  "Nissan Gt"
-]
-
-const carsObject = cars.map((car,i) => ({id: i, title: car}));
-
-function App() {
-  return (
-    <div className='App'>
-     <Header name="Honda"/>
-     <Main adjective="Civic" cars={carsObject}/>
-     <Footer year={new Date().getFullYear()}/>
-   </div>
-  );
 }
 
 export default App;
