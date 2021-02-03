@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from "./App"
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import AppOne from "./App";
+import {BrowserRouter as Router } from "react-router-dom";
+import reportWebVitals from "./reportWebVitals";
 
-import reportWebVitals from './reportWebVitals';
 
+ReactDOM.render(
+  <Router>
+  <AppOne />
+  </Router>, 
+  document.getElementById("root"));
 
-ReactDOM.render( 
-<App login="SohaibCr7"/>, document.getElementById('root')
-);
+// ReactDOM.render(<Checkbox />, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
