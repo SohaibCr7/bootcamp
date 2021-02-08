@@ -1,37 +1,46 @@
 // import React from "react";
 import React, { useState } from "react";
 import "./App.css";
+import ToDoClass from "./ToDoClass";
 
 import ToDOList from "./ToDoList";
 
 function App() {
-  const [inputList, setInputList] = useState(null);
+
+
+  const [inputValue, setInputValue] = useState("");
+
+  const [editRecordData, setEditRecordData] = useState(null);
+  // console.log(editRecordData);
 
   const [items, setItems] = useState([]);
 
-  const itemEvent = (item) => {
-    setInputList(item.target.value);
+  const onInputChange = (item) => {
+    setInputValue(item.target.value);
   };
 
-  const listOfItems = () => {
-    setItems((oldItems) => {
-      return [...oldItems, inputList];
-    });
-    var a = document.getElementById("edit");
-    a.value = "";
+  const saveItem = () => {
+    if (editRecordData) {
+      const temp = [...items];
+      temp[editRecordData.itemId] = inputValue;
+      setItems(temp);
+
+    } else {
+      setItems((oldItems) => {
+        console.log(oldItems);
+        return [...oldItems, inputValue];
+      });
+      setInputValue("");
+    }
   };
 
-  const updateItem = (itemId,id) => {  
-    console.log(itemId,id);
-    document.getElementById("edit").value = itemId;
-
-    // setItems( (items) =>{
-    //   items == itemId;
-    // })
-
+  const onEdit = (itemText, itemId) => {
+    console.log(itemText + " " + itemId);
+    setInputValue(itemText);
+    setEditRecordData({ itemId });
   };
 
-  const deleteItems = (id) => {
+  const onDelete = (id) => {
     // console.log("deleded");
     setItems((oldItems) => {
       return oldItems.filter((arrElement, index) => {
@@ -51,30 +60,25 @@ function App() {
             id="edit"
             type="text"
             placeholder="Add Item"
-            onChange={itemEvent}
+            onChange={onInputChange}
+            value={inputValue /* editRecordData?.itemText */}
           />
-          <button type="submit" onClick={listOfItems}>
-            {" "}
-            +{" "}
-          </button>
+          <button type="submit" onClick={saveItem}>+</button>
 
           <ol>
             {/* <li>{inputList}</li> */}
             {items.map((itemval, index) => {
               return (
-                <ToDOList
-                  text={itemval}
-                  key={index}
-                  onSelect={deleteItems}
-                  id={index}
-                  onClick={updateItem}
-                />
+                <ToDOList text={itemval} key={index} onDelete={onDelete} id={index} onEdit={onEdit} />
               );
-              // return <ToDOList key={i}/>
+             
             })}
           </ol>
         </div>
       </div>
+
+      <ToDoClass />
+
     </>
   );
 }

@@ -7,11 +7,11 @@ const ToDOList = (props) => {
             <>
             <div className="Todo_style">
                 <i className="fa fa-times" onClick={() => {
-                    props.onSelect(props.id);
+                    props.onDelete(props.id);
                 }}/>
 
                 <i className="fa fa-pencil" onClick={ () => 
-                    props.onClick(props.text,props.id)
+                    props.onEdit(props.text,props.id)
                 }/>
 
                  <li> { props.text }</li>
