@@ -6,10 +6,10 @@ class ToDoClass extends Component {
   constructor(props) {
     super(props);
 
-   this.state = {
+    this.state = {
       inputValue: "",
       list: [],
-      editRecordData : null
+      editRecordData: null,
     };
   }
 
@@ -18,51 +18,45 @@ class ToDoClass extends Component {
     this.setState(
       {
         inputValue: input,
-      },console.log(...input)
+      },
+      console.log(...input)
     );
   }
   // On click pay save hogi value user ka input list may..
   saveValue(inputValue) {
-
     if (this.state.editRecordData) {
-        const temp = [...this.state.list];
-        temp[this.state.editRecordData.id] = this.state.inputValue;
+      const temp = [...this.state.list];
+      temp[this.state.editRecordData.id] = this.state.inputValue;
 
-        this.setState({
-            list : temp,
-            inputValue: ""
-        })
-  
-      } 
-    else
-    {
-        let listArray = this.state.list;
-        listArray.push(this.state.inputValue);
+      this.setState({
+        list: temp,
+        inputValue: "",
+      });
+    } else {
+      let listArray = this.state.list;
+      listArray.push(this.state.inputValue);
 
-        this.setState(
-        {
-            list: listArray,
-            inputValue: "",
-        }, );}
+      this.setState({
+        list: listArray,
+        inputValue: "",
+      });
+    }
   }
 
   deleteItem(id) {
-
-      const value = this.state.list.filter( (val) => val !== this.state.list[id] )
-      console.log("updated values :::::" + value)
-      this.setState({ list: value });
-    
+    const value = this.state.list.filter((val) => val !== this.state.list[id]);
+    console.log("updated values ::" + value);
+    this.setState({ list: value });
   }
 
-  upDateItem(val,id){
+  upDateItem(val, id) {
     this.setState({
-        inputValue : val    
-    })
+      inputValue: val,
+    });
     this.setState({
-        editRecordData : {id}
-    })
+      editRecordData: { id },
+    });
   }
-
 
   render() {
     return (
@@ -73,16 +67,24 @@ class ToDoClass extends Component {
             <input
               type="text"
               value={this.state.inputValue}
-              onChange={(e) => this.userInput(e.target.value)} />
+              onChange={(e) => this.userInput(e.target.value)}
+            />
 
-            <button type="submit" onClick={() => this.saveValue(this.state.userInput)}>+</button>
+            <button
+              type="submit"
+              onClick={() => this.saveValue(this.state.userInput)}
+            >
+              +
+            </button>
 
             <ol>
               {this.state.list.map((val, index) => (
                 <li key={index}>
-                    {val}
-                <button onClick={(i) => this.deleteItem(index)}>X</button>
-                <button onClick={(i) => this.upDateItem(val,index)}>Edit</button>
+                  {val}
+                  <button onClick={(i) => this.deleteItem(index)}>X</button>
+                  <button onClick={(i) => this.upDateItem(val, index)}>
+                    Edit
+                  </button>
                 </li>
               ))}
             </ol>

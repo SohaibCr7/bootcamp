@@ -6,7 +6,6 @@ import ToDoClass from "./ToDoClass";
 import ToDOList from "./ToDoList";
 
 function App() {
-
   const [inputValue, setInputValue] = useState("");
 
   const [editRecordData, setEditRecordData] = useState(null);
@@ -22,7 +21,6 @@ function App() {
       const temp = [...items];
       temp[editRecordData.itemId] = inputValue;
       setItems(temp);
-
     } else {
       setItems((oldItems) => {
         console.log(oldItems);
@@ -61,22 +59,26 @@ function App() {
             onChange={onInputChange}
             value={inputValue /* editRecordData?.itemText */}
           />
-          <button type="submit" onClick={saveItem}>+</button>
+          <button type="submit" onClick={saveItem}>
+            +
+          </button>
 
           <ol>
             {/* <li>{inputList}</li> */}
             {items.map((itemval, index) => {
               return (
-                <ToDOList text={itemval} key={index} onDelete={onDelete} id={index} onEdit={onEdit} />
-              );
-             
+                <ToDOList
+                  text={itemval}
+                  key={index}
+                  onDelete={onDelete}
+                  id={index}
+                  onEdit={onEdit} /> );
             })}
           </ol>
         </div>
       </div>
 
       <ToDoClass />
-
     </>
   );
 }
