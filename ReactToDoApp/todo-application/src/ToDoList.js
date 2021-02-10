@@ -5,7 +5,7 @@ const ToDOList = (props) => {
    
         return(
             <>
-            <div className="Todo_style">
+            <div className="Todo_style" >
                 <i className="fa fa-times" onClick={() => {
                     props.onDelete(props.id);
                 }}/>

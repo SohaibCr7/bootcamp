@@ -7,11 +7,9 @@ import ToDOList from "./ToDoList";
 
 function App() {
 
-
   const [inputValue, setInputValue] = useState("");
 
   const [editRecordData, setEditRecordData] = useState(null);
-  // console.log(editRecordData);
 
   const [items, setItems] = useState([]);
 
@@ -34,9 +32,9 @@ function App() {
     }
   };
 
-  const onEdit = (itemText, itemId) => {
-    console.log(itemText + " " + itemId);
-    setInputValue(itemText);
+  const onEdit = (text, itemId) => {
+    console.log(text + " " + itemId);
+    setInputValue(text);
     setEditRecordData({ itemId });
   };
 
@@ -54,7 +52,7 @@ function App() {
       <div className="main_div">
         <div className="center_div">
           <br />
-          <h1>ToDo List</h1>
+          <h1>ToDo List Functional Component</h1>
           <br />
           <input
             id="edit"
