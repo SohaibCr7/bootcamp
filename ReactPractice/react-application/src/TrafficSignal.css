@@ -1,0 +1,27 @@
+.trafficSignal {
+  margin-top: 200px;
+  margin-left: 600px;
+  height: 300px;
+  width: 150px;
+  background-color: #333;
+  float: left;
+  border-radius: 40px;
+}
+
+.bulb {
+  height: 70px;
+  width: 70px;
+  background-color: #111;
+  border-radius: 50%;
+  margin: 25px auto;
+}
+.bulb button{
+    position: absolute;
+    left: 540px;
+}
+
+#box{
+    width: 100px;
+    height: 100px;
+    /* background-color: red; */
+}
