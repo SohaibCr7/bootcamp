@@ -1,23 +1,23 @@
 import "./App.css";
 import Details from "./UserDetails";
 import Clock from "./Clock";
-import ClockClass from "./ClockClass"
+import ClockClass from "./ClockClass";
 import React, { useState, useEffect } from "react";
+import TrafficSignal from "./TrafficSignal";
 
 // Importing State And Components Class
-import States from "./States"
-import UpdateComponet from "./UpdateComponent"
-
+import States from "./States";
+import UpdateComponet from "./UpdateComponent";
 
 function User(props) {
   return <h1>Hello, {props.name}</h1>;
 }
 
 function App() {
-  
   return (
     <>
-      <div className="App">
+      <TrafficSignal />
+      {/* <div className="App">
         <User name="sohaib" />
         <User name="Farooqui" />
         <User name="abc" />
@@ -27,8 +27,8 @@ function App() {
       <Clock />
       <ClockClass />
       {/* <States favouriteColor="Yellow"/> */}
-      <States />
-      <UpdateComponet currentAddress={"Defence"}/>
+      {/* <States />
+      <UpdateComponet currentAddress={"Defence"}/> */} */}
     </>
   );
 }
