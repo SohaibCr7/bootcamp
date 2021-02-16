@@ -1,16 +1,15 @@
-.leftSignal-RightSignal-Container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.leftSignal-RightSignal-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-
 
 /* Top Signal Css */
 .trafficSignalLeft {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
- 
+  box-shadow: 0px 0px 7px 11px #1c2833;
   height: 300px;
   width: 140px;
   background-color: #333;
@@ -23,7 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
+  box-shadow: 0px 0px 7px 11px #1c2833;
   height: 300px;
   width: 140px;
   background-color: #333;
@@ -42,6 +41,7 @@
 #box {
   width: 100px;
   height: 100px;
+  
   /* background-color: red; */
 }
 
@@ -55,6 +55,7 @@
   height: 300px;
   width: 140px;
   background-color: #333;
+  box-shadow: 0px 0px 7px 11px #1c2833;
   border-radius: 40px;
 }
 
@@ -65,26 +66,37 @@
   justify-content: space-around;
   height: 300px;
   width: 140px;
-  margin-top: 60px;
+  margin-top: 70px;
   background-color: #333;
+  box-shadow: 0px 0px 7px 11px #1c2833;
   border-radius: 40px;
   margin-left: 600px;
 }
 
-.trafficSignalLeft h2{
-    position: absolute;
-    top: 280px;
-    text-align: center;
+.trafficSignalLeft h2 {
+  position: absolute;
+  top: 280px;
+  text-align: center;
 }
-.trafficSignalBottom h2{
-    position: absolute;
-    top: 600px
+.trafficSignalBottom h2 {
+  position: absolute;
+  top: 600px;
 }
-.trafficSignalRight h2{
-    position: absolute;
-    top: 280px;
+.trafficSignalRight h2 {
+  position: absolute;
+  top: 280px;
 }
-.trafficSignalTop h2{
-    position: absolute;
-    top: 0px;
+.trafficSignalTop h2 {
+  position: absolute;
+  top: 0px;
+}
+
+.redLight{
+  box-shadow: 1px 3px 28px 7px #ff1717
+}
+.yellowLight{
+  box-shadow: 1px 3px 28px 7px #F1C40F
+}
+.greenLight{
+  box-shadow: 1px 3px 28px 7px #80ca79
 }

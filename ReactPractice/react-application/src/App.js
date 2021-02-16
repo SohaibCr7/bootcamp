@@ -26,9 +26,9 @@ function App() {
       <Details name={"sohaib"} />
       <Clock />
       <ClockClass />
-      {/* <States favouriteColor="Yellow"/> */}
-      {/* <States />
-      <UpdateComponet currentAddress={"Defence"}/> */} */}
+      <States favouriteColor="Yellow"/>
+      <States />
+      <UpdateComponet currentAddress={"Defence"}/> */}
     </>
   );
 }
